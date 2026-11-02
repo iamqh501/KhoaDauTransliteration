@@ -161,10 +161,13 @@ class KhoaDauToQuocNguApp:
 
         ttk.Button(ctrl_frame, text="🎲 Câu ngẫu nhiên", command=self.random_sample).pack(side="right")
         # --- 1. Input Box (Quốc ngữ) ---
-        ttk.Label(main_frame, text="1. Văn bản Gốc (Quốc ngữ):").pack(anchor="w")
+        input_label_frame = ttk.Frame(main_frame)
+        input_label_frame.pack(fill="x")
+        ttk.Label(input_label_frame, text="1. Văn bản Gốc (Quốc ngữ):").pack(side="left")
+        ttk.Button(input_label_frame, text="⚡ Dịch", command=self.on_content_change).pack(side="right")
+
         self.input_text = tk.Text(main_frame, height=5, font=("Segoe UI", 13))
         self.input_text.pack(fill="x", pady=5)
-        self.input_text.bind("<KeyRelease>", lambda e: self.on_content_change())
 
         # --- 2. Middle Box (Khoa Đẩu - Hiển thị trung gian) ---
         ttk.Label(main_frame, text="2. Chữ Khoa Đẩu (Trung gian - Rule-based):").pack(anchor="w")

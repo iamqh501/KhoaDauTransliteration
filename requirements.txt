@@ -1,8 +1,13 @@
-torch>=2.0.0
-torchvision
-torchaudio
-pandas
-numpy
-tqdm
-scikit-learn
-tensorboard
+# Core Deep Learning & Scientific Computing
+torch>=2.2.0,<3.0.0
+numpy>=2.0.0,<3.0.0
+pandas>=2.2.0,<4.0.0
+scikit-learn>=1.5.0,<2.0.0
+tqdm>=4.66.0,<5.0.0
+
+# Corpus Acquisition & Parquet Processing
+datasets>=3.0.0,<6.0.0
+pyarrow>=17.0.0,<27.0.0
+
+# Glyph Image Rendering Utility (misc/script_generator.py)
+Pillow>=10.0.0,<14.0.0
